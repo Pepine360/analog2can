@@ -1,0 +1,46 @@
+(version 1)
+(rule Minimum_clearance_1
+	(constraint clearance (min 0.1mm))
+)
+(rule Routing_diff_pair_1
+	(constraint diff_pair_gap (min 0.2mm) (opt 0.2mm) (max 0.2mm))
+	(condition "A.hasNetclass('CAN')")
+)
+(rule Matched_length_diff_pair_1
+	(constraint skew (max 0.01mm) (within_diff_pairs))
+	(condition "A.hasNetclass('CAN')")
+)
+(rule Matched_length_diff_pair_2
+	(constraint skew (max 0.01mm))
+	(condition "A.hasNetclass('USB')")
+)
+(rule Routing_diff_pair_2
+	(constraint diff_pair_gap (min 0.2mm) (opt 0.2mm) (max 0.2mm))
+	(condition "A.hasNetclass('USB')")
+)
+(rule Copper_to_edge_clearance_1
+	(constraint edge_clearance (min 0.5mm))
+)
+(rule Copper_to_hole_clearance_1
+	(constraint hole_clearance (min 0.2mm))
+)
+(rule Minimum_thermal_relief_spoke_count_1
+	(constraint min_resolved_spokes 4)
+)
+(rule Minimum_annular_width_1
+	(constraint annular_width (min 0.2mm))
+)
+(rule Minimum_drill_size_1
+	(constraint hole_size (min 0.15mm))
+)
+(rule Hole_to_hole_distance_1
+	(constraint hole_to_hole (min 0.2mm))
+)
+(rule Minimum_text_height_and_thickness_1
+	(constraint text_height (min 0.1mm))
+	(constraint text_thickness (min 0.15mm))
+)
+(rule Vias_under_SMD_1
+	(constraint disallow via)
+	(condition "A.Pad_Type == 'SMD'")
+)
