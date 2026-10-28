@@ -5164,7 +5164,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Vishay_IHLP-6767"
+		(property "Footprint" "Inductor_SMD:L_Coilcraft_XAL1510-333"
 			(at 160.02 31.75 0)
 			(hide yes)
 			(show_name no)
